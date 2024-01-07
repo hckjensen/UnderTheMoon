@@ -32,6 +32,13 @@
             height: 365px;
             object-fit: cover;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                scale: 1.03;
+                border-radius: 5px;
+            }
         }
     }
 }
