@@ -15,7 +15,15 @@ function App() {
       <Header heading="Under The Moon"/>
       <Midsection />
       <Gallery />
-      <Footer />
+      <Footer contactInfo={{
+        whatsApp: "+ 45 23 43 43 43",
+        telephoneNumber: "+ 45 58 84 84 84",
+        address: {
+        line1: "Supergatan 56,",
+        line2: "Oslo, Norway"
+        }
+      }} 
+        />
     </>
   )
 }

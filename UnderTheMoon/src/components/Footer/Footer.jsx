@@ -1,8 +1,8 @@
-
+import PropTypes from 'prop-types';
 import styles from './Footer.module.scss';
 
 
-const Footer = () => {
+const Footer = ({ contactInfo }) => {
     return (
         <footer className={styles.footer}>
             <section className={styles.section1}>
@@ -37,21 +37,32 @@ const Footer = () => {
                     <h3>Find Us</h3>
                     <div>
                         <p>WhatsApp</p>
-                        <p>+ 45 23 43 43 43</p>
+                        <p>{contactInfo.whatsApp}</p>
                     </div>
                     <div>
                         <p>Telefonnummer</p>
-                        <p>+ 45 58 84 84 84</p>
+                        <p>{contactInfo.telephoneNumber}</p>
                     </div>
                     <div>
                         <p>Adresse</p>
-                        <p>Supergatan 56,</p>
-                        <p>Oslo, Norway</p>
+                        <p>{contactInfo.address.line1}</p>
+                        <p>{contactInfo.address.line2}</p>
                     </div>
                 </section>
             </section>
         </footer>
     );
 };
+
+Footer.propTypes = {
+    contactInfo: PropTypes.shape({
+      whatsApp: PropTypes.string.isRequired,
+      telephoneNumber: PropTypes.string.isRequired,
+      address: PropTypes.shape({
+        line1: PropTypes.string.isRequired,
+        line2: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  };
 
 export default Footer; 
