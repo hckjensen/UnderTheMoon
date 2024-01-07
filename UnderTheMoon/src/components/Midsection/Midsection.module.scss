@@ -1,0 +1,6 @@
+@use "../../styles/variables/_variables" as vars;
+
+*{
+    font-family: vars.$font-primary;
+    text-align: center;
+}

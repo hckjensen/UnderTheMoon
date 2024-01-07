@@ -1,0 +1,28 @@
+@use "../../styles/variables/_variables" as vars;
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 2rem;
+    height: 58px;
+    padding-right: 50px;
+    list-style: none;
+    font-size: 16px;
+    line-height: normal;
+    color: vars.$color-primary;
+    background-color: vars.$color-secondary;
+    font-family: vars.$font-primary;
+    text-transform: uppercase;
+
+    li {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            scale: 1.1;
+              
+        }
+    }
+}
