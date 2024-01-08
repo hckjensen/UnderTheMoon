@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './Footer.module.scss';
 
 
-const Footer = ({ contactInfo }) => {
+const Footer = ({ contactInfo, links }) => {
     return (
         <footer className={styles.footer}>
             <section className={styles.section1}>
@@ -15,13 +15,10 @@ const Footer = ({ contactInfo }) => {
             </section>
             <section className={styles.section2}>
                 <section className={styles.links}>
-                    <h3>Quick Links</h3>
-                    <p>Hjem</p>
-                    <p>Om os</p>
-                    <p>Prisliste</p>
-                    <p>Booking</p>
-                    <p>Newsletter</p>
-                    <p>Kontakt</p>
+                    <h3>{links.title}</h3>
+                    {links.items.map((item, index) => (
+                        <p key={index}>{item}</p>
+                    ))}
                     
                     <div className={styles.followContainer}>
                         <h3>Follow us</h3>
@@ -62,6 +59,10 @@ Footer.propTypes = {
         line1: PropTypes.string.isRequired,
         line2: PropTypes.string.isRequired,
       }).isRequired,
+    }).isRequired,
+    links: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      items: PropTypes.arrayOf(PropTypes.string).isRequired,
     }).isRequired,
   };
 
