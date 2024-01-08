@@ -6,7 +6,6 @@ const Bookingcard = ({ title, description, buttonText, backgroundImage }) => {
 
     const cardStyle = {
         backgroundImage: `url(${backgroundImage})`,
-        // Add other styles as needed
     };
 
     return (
