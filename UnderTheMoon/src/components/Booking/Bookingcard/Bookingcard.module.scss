@@ -1,0 +1,64 @@
+@use "../../../styles/variables/_variables" as vars;
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    height: 450px;
+    width: 800px;
+    color: vars.$color-primary;
+    text-shadow: 8px 4px 7px rgba(0, 0, 0, 1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    h3 {
+        margin-top: 60px;
+        font-size: vars.$font-size-medium;
+    }
+
+    p {
+        margin: 0 200px;
+        margin-top: 60px;
+        font-size: vars.$font-size-small;
+        line-height: 20px;
+        // overflow-wrap: break-word;
+        // text-align: justify;
+        // hyphens: auto;
+    }
+
+
+    button{
+        margin: 0 auto;
+        margin-top: 100px;
+        padding: 15px 10px;
+        width: 150px;
+        border: 1.7px solid #fff;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: vars.$color-primary;
+        font-size: vars.$font-size-small;
+        font-family: vars.$font-primary;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+        scale: 1.1;
+          
+        }
+    }
+    
+
+    &:nth-child(1) {
+        background-image: url("../../../assets/images/booking1.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+        background-image: url("../../assets/images/booking2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

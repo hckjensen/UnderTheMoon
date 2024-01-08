@@ -27,7 +27,6 @@ const Header = ({heading}) => {
 
 
 Header.propTypes = {
-    image: PropTypes.arrayOf(PropTypes.string).isRequired,
     heading: PropTypes.string.isRequired
 
 };

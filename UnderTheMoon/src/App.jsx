@@ -8,7 +8,7 @@ import Midsection from './components/Midsection/Midsection'
 function App() {
   
   
-  const footerLinks = ["Hjem", "Om os", "Prisliste", "Booking", "Newsletter", "Kontakt"]
+  const footerLinks = ["Hjem", "About Us", "Pricelist", "Booking", "Newsletter", "Contact"]
 
   return (
     <>
@@ -24,7 +24,10 @@ function App() {
             line2: "Oslo, Norway"
             }
         }}
-        links={footerLinks} 
+        links={{
+          title: "Quick Links",
+          items: footerLinks
+        }} 
         />
     </>
   )

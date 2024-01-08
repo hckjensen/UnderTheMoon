@@ -37,11 +37,11 @@ const Footer = ({ contactInfo, links }) => {
                         <p>{contactInfo.whatsApp}</p>
                     </div>
                     <div>
-                        <p>Telefonnummer</p>
+                        <p>Phone</p>
                         <p>{contactInfo.telephoneNumber}</p>
                     </div>
                     <div>
-                        <p>Adresse</p>
+                        <p>Address</p>
                         <p>{contactInfo.address.line1}</p>
                         <p>{contactInfo.address.line2}</p>
                     </div>
