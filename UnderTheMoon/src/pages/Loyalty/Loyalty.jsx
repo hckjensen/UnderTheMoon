@@ -1,7 +1,11 @@
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
-
+import { useEffect } from 'react';
 const LoyaltyPage = () => { 
+
+    useEffect(() => {
+        document.title = 'UTM Loyalty | Under The Moon';
+    }, []);
 
     const footerLinks = ["Hjem", "About Us", "Pricelist", "Booking", "Newsletter", "Contact"]
     const heading = "UNDER CONSTRUCTION";

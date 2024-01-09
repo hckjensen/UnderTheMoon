@@ -1,5 +1,6 @@
 @use "../../styles/variables/_variables" as vars;
 
+
 .navbar {
     display: flex;
     justify-content: flex-end;
@@ -19,27 +20,36 @@
 
     li {
         cursor: pointer;
-        transition: all 0.2s ease-in-out;
+        // transition: all 0.2s ease-in-out;   
         text-decoration: none;
 
         a{
+            display: inline-block;
             text-decoration: none;
             color: vars.$color-primary;
             font-size: 20px;
+            transition: transform 0.2s ease-in-out;
 
+            
+
+            &:not(.active):hover {
+                transform: scale(1.2);
+            }
           
         }
 
         a.active {
-            color: vars.$color-secondary !important;
-            font-weight: bold !important;
+            font-weight: bold;
+            
+            text-decoration: underline;
+            transform: scale(1.2);
+            transition: transform 0.2s ease-in-out;
+            
+            
         }
 
         
 
-        &:hover {
-            scale: 1.1;
-              
-        }
+         
     }
 }

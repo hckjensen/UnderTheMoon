@@ -2,10 +2,16 @@
   import Midsection from "../../components/Midsection/Midsection";
   import Gallery from "../../components/Gallery/Gallery";
   import Footer from "../../components/Footer/Footer";
-
+import { useEffect } from "react";
 
 
   const HomePage = () => {
+
+    useEffect(() => {
+        document.title = 'Home | Under The Moon';
+    }, []);
+
+
   const footerLinks = ["Hjem", "About Us", "Pricelist", "Booking", "Newsletter", "Contact"]
   const heading = "Under The Moon";
 

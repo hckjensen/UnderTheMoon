@@ -7,7 +7,14 @@ const Nav = ({items}) => {
         <>
             <ul className={styles.navbar}>
                 {items.map((item, index) => (
-                    <li key={index}><NavLink to={item.path} activeClassName="active">{item.name}</NavLink></li>
+                    <li key={index}>
+                        <NavLink 
+                            to={item.path} 
+                            className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}
+                        >
+                            {item.name}
+                        </NavLink>    
+                    </li>
                 ))}
             </ul>
         </>
