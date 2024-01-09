@@ -5,6 +5,7 @@ import Contact from '../pages/Contact/Contact';
 import Concepts from '../pages/Concepts/Concepts';
 import Loyalty from '../pages/Loyalty/Loyalty';
 import '../App.scss'
+import NoPage from '../pages/404';
 
 function AppRouter() {
     return (
@@ -15,6 +16,7 @@ function AppRouter() {
                 <Route path="/loyalty" element={<Loyalty />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NoPage/>} />
             </Routes>
         </Router>
     );
