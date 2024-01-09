@@ -27,7 +27,7 @@ SubHeader.propTypes = {
 
 
 const Header = ({heading}) => {
-    const navItems = ["Hjem", "Koncepter", "UTM Loyalty", "Om", "Kontakt"];
+    
 
     const subHeading = "hair stylist og frisør";
     const subHeadingText = "Lorem ipsum dolor sit amet consectetur. Laoreet in vestibulum id in. At aliquam sed nibh elementum. Gravida et tellus quam nibh diam blandit a odio semper. Eu congue eget dolor commodo pellentesque et ac orci. Accumsan rhoncus sed fermentum malesuada. Eu risus integer consequat egestas diam suspendisse consequat mattis.";
@@ -35,7 +35,13 @@ const Header = ({heading}) => {
     return(
         <>
             <div className={styles.header}>
-                <Nav items={navItems}/>
+            <Nav items={[
+                { name: 'Home', path: '/' },
+                { name: 'Concepts', path: '/concepts' },
+                { name: 'Loyalty', path: '/loyalty' },
+                { name: 'About', path: '/about' },
+                { name: 'Contact', path: '/contact' },
+                ]} />
                 <h1>{heading}</h1>
                 <div className={styles.textBox}>
                     <SubHeader subHeading={subHeading} subHeadingText={subHeadingText}/>
