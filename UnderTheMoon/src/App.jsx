@@ -9,10 +9,11 @@ function App() {
   
   
   const footerLinks = ["Hjem", "About Us", "Pricelist", "Booking", "Newsletter", "Contact"]
+  const heading = "Under The Moon";
 
   return (
     <>
-      <Header heading="Under The Moon"/>
+      <Header heading={heading}/>
       <Midsection />
       <Gallery />
       <Footer 
@@ -32,5 +33,7 @@ function App() {
     </>
   )
 }
+
+
 
 export default App
