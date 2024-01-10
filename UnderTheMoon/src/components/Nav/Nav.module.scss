@@ -1,55 +1,45 @@
 @use "../../styles/variables/_variables" as vars;
 
-
 .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    gap: 2rem;
-    height: 58px;
-    padding-right: 50px;
-    list-style: none;
-    
-    line-height: normal;
-    color: vars.$color-primary;
-    background-color: vars.$color-secondary;
-    font-family: vars.$font-primary;
-    
-    text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2rem;
+  height: 58px;
+  padding-right: 50px;
+  list-style: none;
 
-    li {
-        cursor: pointer;
-        // transition: all 0.2s ease-in-out;   
-        text-decoration: none;
+  line-height: normal;
+  color: vars.$color-primary;
+  background-color: vars.$color-secondary;
+  font-family: vars.$font-primary;
 
-        a{
-            display: inline-block;
-            text-decoration: none;
-            color: vars.$color-primary;
-            font-size: 20px;
-            transition: transform 0.2s ease-in-out;
+  text-transform: uppercase;
 
-            
+  li {
+    cursor: pointer;
+    // transition: all 0.2s ease-in-out;
+    text-decoration: none;
 
-            &:not(.active):hover {
-                transform: scale(1.2);
-            }
-          
-        }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: vars.$color-primary;
+      font-size: 20px;
+      transition: transform 0.2s ease-in-out;
 
-        a.active {
-            font-weight: bold;
-            
-            text-decoration: underline;
-            transform: scale(1.2);
-            transition: transform 0.2s ease-in-out;
-            
-            
-        }
-
-        
-
-         
+      &:not(.active):hover {
+        transform: scale(1.2);
+      }
     }
+
+    a.active {
+      font-weight: bold;
+
+      text-decoration: underline;
+      transform: scale(1.2);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
 }

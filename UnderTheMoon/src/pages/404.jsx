@@ -27,8 +27,8 @@ const NoPage = () => {
           items: footerLinks
         }} 
         />
-        </>
+        </> 
     )
     
 }
-export default NoPage
+export default NoPage 
